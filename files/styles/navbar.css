@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#navigationWrapper {
+	display:block;
+	float:clear;
+	background:url(../images/background_overlay.png) center center repeat #808080;
+	font-size:0px;
+	height:0px;
+	overflow:hidden;
+}
+#navigationWrapper:target {
+	height:auto;
+}
+#navigationWrapper ul {
+	display:block;
+	width:100%;
+	padding:0px;
+	margin:0px;
+	list-style:none;
+	text-align:center;
+	text-transform:uppercase;
+}
+#navigationWrapper ul li {
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width:33.3%;
+}
+#navigationWrapper ul li a {
+	display:block;
+	color:white;
+	text-decoration:none;
+	font-size:21px;
+	padding:30px 00px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+#navigationWrapper ul li:hover a { 
+	background-color:#FFC000;
+	color:#333;
+}
+
+
+/* Tablet Layout: 570px to 980px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 570px) {
+#navigationWrapper{
+	height:auto;
+}
+#navigationWrapper ul li {
+	width: 16.66%;
+}
+#navigationWrapper ul li a {
+	font-size: 20px;
+	padding:15px 0px;
+}
+}
+
+/* Desktop Layout: 980px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 980px) {
+#navigationWrapper {
+	display: block;
+	height:auto;
+}
+#navigationWrapper .navigationContainer {
+	display:block;
+	overflow-x:hidden;
+	white-space:nowrap;
+}
+#navigationWrapper nav {
+	display:inline-block;
+	width:100%;
+}
+#navigationWrapper ul {
+	display:inline-block;
+	width:100%;
+	text-align:left;
+	float:left;
+}
+#navigationWrapper ul li {
+	width:auto;
+}
+#navigationWrapper ul li a {
+	padding:10px 25px;
+	font-size:26px;
+	width:auto;
+}
+}

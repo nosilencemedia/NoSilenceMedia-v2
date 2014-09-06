@@ -1,0 +1,409 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Hero */
+.heroimage {
+	width:100%;
+	height:95%;
+	overflow:hidden;
+	position:relative;
+	display:block;
+	clear:both;
+}
+
+/* Hero Images */
+.heroimage .heroimages {
+	display:block;
+	height:50%;
+	position:relative;
+	width:100%;
+	overflow:hidden;
+}
+.heroimage .heroimages .heroimagescontainer {
+	height:100%;
+	display:block;
+	position:relative;
+	white-space:nowrap;
+}
+.heroimage .heroimages .heroimagescontainer figure {
+	display:inline-block;
+	height:100%;
+	width:100%;
+	background-size:cover;
+	background-position:center center;
+	vertical-align:top;
+}
+.heroimage .heroimages .heroimagescontainer figure video, .heroimage .heroimages .heroimagescontainer figure .video {
+	display:none;
+	height:100%;
+	width:100%;
+	margin:0px;
+	padding:0px;
+	object-fit:cover;
+	overflow:hidden;
+}
+
+/* Hero Description */
+.heroimage figcaption {
+	display:block;
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	height:50%;
+}
+.heroimage .centerContainer {
+	clear:both;
+	overflow:auto;
+	display:block;
+	height:100%;
+}
+.heroimage figcaption .herodescriptioncontainer {
+	display:block;
+	height:100%;
+	max-width:100%;
+	white-space:nowrap;
+}
+.heroimage figcaption .herodescriptioncontainer .herodescription {
+	display: inline-block;
+	vertical-align:top;
+	width:100%;
+	height:100%;
+	white-space:normal;
+	position:relative;
+	background-color:black;
+	box-sizing:border-box;
+}
+.heroimage figcaption .herodescriptioncontainer .herodescription h2 {
+	margin:0px;
+	padding:0px;
+	background-color:#FFC000;
+	padding:5px 10px;
+	color:#333333;
+	font-weight:500;
+}
+.heroimage figcaption .herodescriptioncontainer .herodescription div {
+	padding:0px;
+	margin:0px;
+	width:100%;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	height:60%;
+	display:block;
+	clear:both;
+	padding:5px 10px;
+	box-sizing:border-box;
+}
+.heroimage figcaption .herodescriptioncontainer .herodescription a {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	display:block;
+	background-color: #333333;
+	width:100%;
+	box-sizing:border-box;
+	padding:15px 10px;
+	text-align:center;
+}
+
+
+/* Hero Text */
+.herocontent {
+	height:90%;
+	position:relative;
+	display:block;
+	background-color:black;
+	overflow:hidden;
+}
+.herocontent.fixedheight {
+	height:auto;
+	min-height:70%;
+}
+.herocontent.centertext {
+	text-align:center;
+}
+
+.herocontent .herobackground {
+	display:block;
+	height:100%;
+	width:100%;
+	background-size:cover;
+	-webkit-background-size:cover;
+	background-position:center center;
+	background-repeat:no-repeat;
+	position:absolute;top:0px;left:0px;
+	z-index:1;
+	overflow:hidden;
+	margin:-1px;
+	padding:1px;
+	opacity:.8;
+}
+
+.herocontent .herobackground.blurback {
+	-webkit-filter: blur(15px);
+	-moz-filter: blur(15px);
+	-o-filter: blur(15px);
+	-ms-filter: blur(15px);
+	filter: blur(15px);
+}
+.herocontent .herobackground.blankback
+{
+	background-image:url(../images/background_overlay.png);
+	background-position:center center;
+	background-repeat:repeat;
+	background-color:#333;
+	background-size: auto;
+}
+.herocontent .herobackground video {
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+.herocontent .centerContainer {
+	box-sizing:border-box;
+	padding:20px 10px;
+	height:100%;
+	position:relative;
+	z-index:2;
+	overflow:auto;
+	text-shadow:0px 0px 20px black;
+}
+.herocontent .centerContainer .content {
+	width:100%;
+	position:relative;
+}
+.herocontent.centertext .centerContainer .content {
+	margin:0px auto;
+}
+.herocontent .centerContainer table {
+	padding:0px;
+	margin:0px;
+	height:100%;
+	width:100%;
+	border:none;
+}
+.herocontent .centerContainer table tr td {
+	height:100%;
+	vertical-align:middle;
+}
+.herocontent .centerContainer h1 {
+	font-weight:200;
+	letter-spacing:10px;
+}
+.herocontent .centerContainer h1.heading01 {
+	border-bottom:solid 1px white;
+	margin-bottom:10px;
+}
+
+/* Tablet Layout: 570px to 980px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 570px) {
+
+/* Hero */
+.heroimage {
+	height:80%;
+}
+
+/* Hero Images */
+.heroimage .heroimages {
+	height:100%;
+}
+.heroimage .heroimages .heroimagescontainer figure video, .heroimage .heroimages .heroimagescontainer figure .video {
+	display:none;
+}
+
+/* Hero Description */
+.heroimage figcaption {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+}
+.heroimage .centerContainer {
+	clear:both;
+	height:100%;
+	overflow:visible;
+	display:block;
+	position:relative;
+}
+.heroimage figcaption .herodescriptioncontainer {
+	display: block;
+	height: 532px;
+	width: 532px;
+	white-space: nowrap;
+	position: absolute;
+	right: -50px;
+	bottom: -50px;
+	overflow: hidden;
+	border-radius: 532px;
+	-webkit-box-shadow: 0px 0px 150px #000000;
+	box-shadow: 0px 0px 150px #000000;
+	transform: scale(.8);
+	-webkit-transform: scale(.8);
+}
+.heroimage figcaption .herodescriptioncontainer:hover {
+	
+}
+.heroimage figcaption .herodescriptioncontainer .herodescription {
+	text-align:center;
+	background-color:#FFC000;
+	color:#333333;
+	font-size:25px;
+}
+.heroimage figcaption .herodescriptioncontainer .herodescription h2 {
+	padding:60px 50px 0px 50px;
+	font-weight:500;
+	font-size:75px;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	text-align:center;
+}
+.heroimage figcaption .herodescriptioncontainer .herodescription div {
+	font-weight:500;
+	padding:0px 10px 15px 10px;
+	height:245px;
+	text-overflow:ellipsis;
+	overflow-y:scroll;
+	width:80%;
+	margin:0px auto;
+}
+.heroimage figcaption .herodescriptioncontainer .herodescription a {
+	font-size:40px;
+	padding:25px 40px 40px 40px;
+	color:#FFC000;
+	text-transform:uppercase;
+	font-weight:500;
+}
+.heroimage figcaption .herodescriptioncontainer .herodescription a:hover {
+	text-decoration:none;
+}
+
+
+
+
+/* Hero Text */
+.herocontent .centerContainer .content {
+	width:80%;
+	position:relative;
+}
+.herocontent.fixedheight {
+	height:400px;
+}
+.herocontent .centerContainer h1 {
+	font-size:40px;
+}
+}
+
+/* Desktop Layout: 980px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 980px) {
+
+/* Hero */
+.heroimage {
+	height:95%;
+}
+
+/* Hero Images */
+.heroimage .heroimages {
+	height:100%;
+}
+.heroimage .heroimages .heroimagescontainer figure video, .heroimage .heroimages .heroimagescontainer figure .video {
+	display:block;
+}
+
+/* Hero Description */
+.heroimage figcaption {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+}
+.heroimage .centerContainer {
+	clear:both;
+	height:100%;
+	overflow:visible;
+	display:block;
+	position:relative;
+}
+.heroimage figcaption .herodescriptioncontainer {
+	display: block;
+	height: 532px;
+	width: 532px;
+	white-space: nowrap;
+	position: absolute;
+	right: -50px;
+	bottom: 10px;
+	overflow: hidden;
+	border-radius: 532px;
+	-webkit-box-shadow: 0px 0px 150px #000000;
+	box-shadow: 0px 0px 150px #000000;
+	transform: scale(.9);
+	-webkit-transform: scale(.9);
+	cursor:default;
+}
+.heroimage figcaption .herodescriptioncontainer:hover {
+	transform: scale(.95);
+	-webkit-transform: scale(.95);
+}
+.heroimage figcaption .herodescriptioncontainer:active {
+	transform: scale(.85);
+	-webkit-transform: scale(.85);
+}
+	
+.heroimage figcaption .herodescriptioncontainer .herodescription {
+	text-align:center;
+	background-color:#FFC000;
+	color:#333333;
+	font-size:25px;
+}
+.heroimage figcaption .herodescriptioncontainer .herodescription h2 {
+	padding:60px 50px 0px 50px;
+	font-weight:500;
+	font-size:75px;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	text-align:center;
+}
+.heroimage figcaption .herodescriptioncontainer .herodescription div {
+	font-weight:500;
+	padding:0px 10px 15px 10px;
+	height:245px;
+	text-overflow:ellipsis;
+	overflow-y:scroll;
+	width:80%;
+	margin:0px auto;
+}
+.heroimage figcaption .herodescriptioncontainer .herodescription a {
+	font-size:40px;
+	padding:25px 40px 40px 40px;
+	color:#FFC000;
+	text-transform:uppercase;
+	font-weight:500;
+	box-sizing:border-box;
+	width:100%;
+}
+.heroimage figcaption .herodescriptioncontainer .herodescription a:hover {
+	text-decoration:none;
+}
+
+
+
+
+
+/* Hero Text */
+.herocontent .centerContainer .content {
+	width:70%;
+	position:relative;
+}
+.herocontent.fixedheight {
+	height:600px;
+}
+.herocontent .centerContainer h1 {
+	font-size:70px;
+	letter-spacing:20px;
+	margin-bottom:20px;
+}
+
+}
