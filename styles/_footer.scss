@@ -1,0 +1,78 @@
+/* _footer.scss */
+
+/* Mobile Layout */
+footer {
+	display:block;
+	background-color:#1A1A1A;
+	clear:both;
+	float:none;
+}
+footer a, footer a:link, footer a:visited, footer {
+	color:#808080;
+}
+footer section {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 15px 10px;
+	display: block;
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+	vertical-align:top;
+}
+footer ul {
+	display:block;
+	list-style:none;
+	padding:0px;
+	margin:0px;
+}
+footer ul li ul {
+	padding-left:20px;
+}
+
+
+
+/*
+	|
+	|     Tablet Layout
+	|
+*/	
+@include breakpoint(tablet) {
+	
+	footer {
+		text-align:center;
+	}
+	footer section {
+		width: 50%;
+		float:left;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		font-size: 16px;
+	}
+
+}
+
+/* Desktop Layout */
+@include breakpoint(desktop) {
+	
+	footer  {
+		height: 70%;
+		display: block;
+		overflow:auto;
+	}
+	footer .centerContainer {
+		height:100%;
+		overflow:visible;
+	}
+	footer section {
+		width: 33.3%;
+		display: block;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		font-size: 15px;
+		float:left;
+	}
+
+}

@@ -1,0 +1,59 @@
+/* Scss Document */
+
+/*
+Theme Name: No Silence Media
+Theme URI: http://nysics.com
+Author: Andreas Reif
+Author URI: http://andreasjr.nysics.com/
+Description: A custom theme to bring out the best of No Silence Media services and entertainment.
+Version: 0.0.1
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: black, blue, white, light, one-column, fluid-layout, responsive-layout, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Text Domain: blankslate
+
+No Silence Media Theme © 2014 No Silence Media
+*/
+
+/*General Dependencies*/
+
+/* Mobile Layout */
+	@mixin breakpoint($point) {
+		/* Mobile Layout: 480px and below. */
+		@if $point == phone {
+			@media (min-width: 0px) { @content; }
+		}
+		/* Tablet Layout: 570px to 980px. Inherits styles from: Mobile Layout. */
+		@else if $point == tablet {
+			@media (min-width: 570px) { @content; }
+		}
+		/* Desktop Layout: 980px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+		@else if $point == desktop {
+			@media (min-width: 980px)  { @content; }
+		}
+	}
+
+/* Box-sizing */
+	@mixin box-sizing($type:border-box) {
+		-webkit-box-sizing:$type;
+		-moz-box-sizing:$type;
+		box-sizing:$type;
+	}
+
+/*Colors*/
+	$nsmgray: #333333;
+	$nsmyellow: #FFC000;
+	$nsmblue: #007BFF;
+
+/* Backgrounds */
+	@mixin nsmback($color) {
+		background-image: url(images/background_overlay.png);
+		background-repeat:repeat;
+		background-position:center center;
+		background-color:$color;
+	}
+
+@import 'styles/boilerplate';
+@import 'styles/mainstyle';
+@import 'styles/navbar';
+@import 'styles/footer';

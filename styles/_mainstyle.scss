@@ -1,0 +1,145 @@
+/* _mainstyle.scss */
+
+/* Mobile Layout: 480px and below. */
+@charset "utf-8";
+html {
+	height:100%;
+}
+body {
+	font-family: dosis;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18px;
+	height:100%;
+	background:url(images/background_overlay.png) #333333;
+}
+body, a, a:link, a:visited {
+	color:white;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+* {
+	transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}/**/
+  
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:500;
+	margin:0px;
+	padding:0px;
+}
+h1, h2 {
+	font-weight:200;
+	text-transform:uppercase;
+}
+h1 {
+	font-size:2em;
+}
+h2 {
+	font-size:1.5em;
+}
+p {
+	padding:0px;
+	margin:0px;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+.hide_mobile { 
+	display: none !important;
+}
+
+
+
+
+/* Begin Structure */
+
+/* Body Struture */
+.bodycontainer {
+	display:block;
+	height:100%;
+	width:100%;
+	margin:0px auto;
+	position:relative;
+}
+
+.contentwidth {
+	position:relative;
+	display:block;
+	width:100%;
+	padding:0px 0px;
+	margin:0px auto;
+	@include box-sizing(border-box);
+}
+
+
+
+
+/* Tablet Layout: 570px to 980px. Inherits styles from: Mobile Layout. */
+
+@include breakpoint(tablet) {
+
+	h1 {
+		font-size:2.5em
+	}
+	h2 {
+		font-size:2em;
+	}
+	.hide_mobile {
+	display: inherit !important;
+	}
+	.hide_tablet {
+	display: none !important;
+	}
+	
+	
+	
+	.contentwidth {
+		width:100%;
+		padding:0px 10px;
+		margin:0px auto;
+	}
+
+}
+
+/* Desktop Layout: 980px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+@include breakpoint(desktop) {
+	h1 {
+		font-size:3em;
+	}
+	h2 {
+		font-size:2em
+	}
+	.hide_mobile {
+	display: inherit !important;
+	}
+	.hide_desktop {
+	display: none !important;
+	}
+	.zeroMargin_desktop {
+	margin-left: 0;
+	}
+	
+	
+	
+	.contentwidth {
+		width:80%;
+		padding:0px 0px;
+		margin:0px auto;
+	}
+}

@@ -1,0 +1,44 @@
+/* _navbar.scss */
+
+/* Mobile Layout: 480px and below. */
+#navbarfill, #mnavbar {
+	height:40px;
+	display:block;
+	clear:both;
+	overflow:hidden;
+}
+#mnavbar {
+	background-color:$nsmyellow;
+	position:fixed;
+	left:0px;
+	right:0px;
+	z-index:10;
+	@include box-sizing;
+	
+	section, nav {
+		display:inline-block;
+		vertical-align:top;
+	}
+	
+	#branding {
+		font-size:2em;
+		text-transform:uppercase;
+		div {
+			display:inline-block;
+		}
+	}
+}
+	
+/* Tablet Layout */
+@include breakpoint(tablet) {
+	#navbarfill, #mnavbar {
+		height:60px;
+	}
+}
+
+/* Desktop Layout */
+@include breakpoint(desktop) {
+	#navbarfill, #mnavbar {
+		height: 80px;
+	}
+}
